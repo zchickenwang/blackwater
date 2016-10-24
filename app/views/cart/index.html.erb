@@ -1,0 +1,43 @@
+<h1>Cart</h1>
+
+<% if @cart.empty? %>
+    <p> nothing here </p>
+<% else %>
+    <%= link_to 'Empty Cart', cart_clear_path %>
+<% end %>
+
+<% total = 0 %>
+
+<ul>
+<% @cart.each do | id, quantity | %>
+    <% product = Product.find_by_id(id) %>
+
+    <li>
+        <%= link_to product.title, product %>
+        <p><%= product.description %></p>
+        <p><%= number_to_currency(product.price, :unit => '$') %></p>
+        <p>Quantity: <%= quantity %></p> 
+    </li>
+    <% total += quantity * product.price %>
+
+<% end %>
+</ul>
+
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Amount: <%= number_to_currency(total, :unit => '$') %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%= total * 100 %>"
+          data-locale="auto"></script>
+<% end %>
