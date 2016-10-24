@@ -18,11 +18,11 @@ class ChargesController < ApplicationController
         :description => 'Rails Stripe customer',
         :currency    => 'usd'
       )
-      redirect_to :controller => 'cart', :action => 'clearCart' 
+      redirect_to :controller => 'CartController', :action => 'clearCart' 
 
       rescue Stripe::CardError => e
         flash[:error] = e.message
         redirect_to new_charge_path
-      end
+      
     end
 end
