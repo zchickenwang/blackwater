@@ -18,7 +18,7 @@ class CartController < ApplicationController
 
   def clearCart
     session[:cart] = nil
-    redirect_to :action => :index
+    redirect_to root_path
   end
 
   def index
@@ -28,4 +28,5 @@ class CartController < ApplicationController
         @cart = {}
     end
   end
+
 end
