@@ -19,6 +19,20 @@
     padding: 0;
 }
 
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* TYPEFACES */
 
@@ -83,7 +97,7 @@
 
 #shop_nav a, #cart_nav a{
     font-family: AdobeCaslon;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 300;
     line-height: 20px;
     color: #000;
@@ -117,12 +131,12 @@
 }
 
 #bottom{
-    position: absolute;
+    position: relative;
+    z-index: -1;
     width: 70%;
-    height: 9%;
     background: transparent;
     left: 50%;
-    bottom: 0%;
+    bottom: 0;
     margin-left: -35%;
     text-align: center;
 }
@@ -146,8 +160,8 @@
 }
 
 #logo img{
-    width: 5%;
-    margin-bottom: -1px;
+    width: 4.5%;
+    margin-bottom: -3px;
     height: auto;
 }
 
@@ -161,7 +175,7 @@
 #logo h1{
     font-family: BrandonGrotesque;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1.05em;
     letter-spacing: 0.04em;
     color: #000;
 }
@@ -169,10 +183,10 @@
 #logo h2{
     font-family: AdobeCaslon;
     font-weight: 300;
-    font-size: 1.05em;
-    letter-spacing: 0.04em;
+    font-size: 1.00em;
+    letter-spacing: 0.03em;
     color: #000;
-    margin-top: -2px;
+    margin-top: -5px;
 }
 
 
