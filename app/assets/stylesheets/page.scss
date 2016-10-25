@@ -7,3 +7,15 @@
     height: auto;
     margin: 0;
 }
+
+#hu{
+    src: <%= asset_path('sn1.jpg') %>
+}
+
+#hd{
+    src: <%= asset_path('sn1.jpg') %>
+}
+
+#ht{
+    src: <%= asset_path('sn1.jpg') %>
+}
