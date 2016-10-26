@@ -1,6 +1,10 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 
 .maison{
     position: relative;
@@ -13,12 +17,199 @@
 
 #photoscroll{
     position: relative;
+    z-index: 5;
     width: 120%;
     left: -10%;
-    height: 70%;
+    height: 80%;
     border: none;
-    margin: 3% 0 1% 0;
+    margin: 1% -2% 1% 1%;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    background-color: #000;
 }
+
+#awaw{
+    z-index: 100;
+    width: 50%;
+    height: 10%;
+    margin: 2% auto -3.5%;
+    padding: 0.5% 0;
+    border: none;
+    background-color: transparent;
+    pointer-events: none;
+    text-align: center;
+}
+
+h4{
+    font-family: BrandonGrotesque;
+    font-size: 1.0em;
+    font-weight: 300;
+    margin: 0 0 0 5%;
+    letter-spacing: 8em;
+    color: #fff;
+}
+
+h5{
+    font-family: sans-serif;
+    font-style: bold;
+    font-size: 5.8em;
+    letter-spacing: 0.1em;
+    color: #ccccc;
+}
+
+ @media screen and (min-width: 45em) {
+    .slide__content {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+    }
+    .slide__image, .slide__text {
+      padding: 3%;
+      -webkit-flex: 1;
+      flex: 1;
+    } 
+    .slide:nth-child(2n) .slide__text {
+      -webkit-order: 1;
+      order: 1;
+    }
+    .nav {
+      display: flex;
+    }
+    /* horizontal scroll styles */
+    html, body {
+      height: 100%;
+    }
+    .slides {
+      white-space: nowrap;
+      height: 70%;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+    }
+    .slide__content {
+      height: 100%;
+    }
+
+    /* parallax */
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+      html, body {
+        overflow-x: hidden;
+      }
+      body {
+        transform: translateZ(0px); /* Fix paint issues in Edge && Safari H/W acceleration */
+      }
+      .slides {
+        position: absolute;
+        overflow-x: auto;
+        overflow-y: hidden;
+        perspective: 300px;
+        scroll-behavior: smooth;
+        width: 100%;
+        margin: -10% 0 0 -5%;
+      }
+      .slide, .slide__content {
+        transform-style: preserve-3d;
+      }
+      .slide__text {
+        transform: translateZ(100px) scale(.3);
+        transform-origin: 100% 50%;
+      }
+      .slide:nth-child(2n) .slide__image {
+        transform: translateZ(100px) scale(.67);
+        transform-origin: 100% 50%;
+      }
+      .slide:nth-child(2n) .slide__text {
+        transform-origin: 0% 50%;
+      }
+      .slide:nth-child(2n) .slide__bg {
+        transform: translateZ(59px) scale(.85);
+      }
+      .slide:nth-child(2n+1):not(:first-child) .slide__bg {
+        left: -50%;
+      }
+      .slide:nth-child(2n+1):not(:last-child) .slide__bg {
+        right: -50%;
+      }
+      .slide:nth-child(2n) {
+        z-index: 1; /* ensure slides overlay correctly */
+      }
+    }
+  }
+
+
+
+
+
+.slide {
+    position: relative;
+    margin-left: -100px;
+    padding: 0;
+  }
+  .slide__content {
+    max-width: 100%;
+    margin: auto;
+  }
+  .slide__text, .slide__image {
+    padding: 0;
+  }
+  .slide__image svg {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+  }
+  .slide__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  /* slide backgrounds */
+
+  #slide-1 .slide__bg {
+    background-color: transparent;
+  }  
+  #slide-2 .slide__bg {
+    background-color: transparent;
+  }
+  #slide-3 .slide__bg {
+    background-color: transparent;
+  }
+  #slide-4 .slide__bg {
+    background-color: transparent;
+  }
+  #slide-5 .slide__bg {
+    background-color: transparent;
+  }
+  #slide-6 .slide__bg {
+    background-color: transparent;
+  }
+
+
+
+body {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body > svg {
+    display: none;
+}
+
+
+
+

@@ -25,13 +25,21 @@
     </div>
 </nav>
 
+
+<div class="wrapper">
+  <div id="alerts">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
 <div id="main_wrap">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
 </div>
 
-<div id="bottom">
+<div class="push"></div>
+</div>
+
+<div class="footer">
       <%= link_to "Press", new_user_session_path %>
       <%= link_to "Mailing List", new_user_session_path %>
       <%= link_to "Legal", new_user_session_path %>
