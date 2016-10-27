@@ -110,7 +110,7 @@ a{
         letter-spacing: 0.03em;
         color: #000;
         line-height: 100%;
-        text-overflow: ellipsis; /* will make [...] at the end */
+        text-overflow: clip; /* will make [...] at the end */
         width: 50px; /* change to your preferences */
         margin: 0 auto;
         white-space: nowrap; /* paragraph to one line */
