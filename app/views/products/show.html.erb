@@ -21,7 +21,7 @@
       </h2>
 
       <p id="product_about">
-        <%= @product.description %>
+        <%= @product.description.gsub(/\n/, '<br/>') %>
       </p>
 
 
