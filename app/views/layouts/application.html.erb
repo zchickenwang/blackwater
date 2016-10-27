@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Cartapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,6 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  
 
 <nav id="nav">
     <div id="logo">
@@ -41,8 +44,8 @@
 
 <div class="footer">
       <%= link_to "Press", new_user_session_path %>
-      <%= link_to "Mailing List", new_user_session_path %>
-      <%= link_to "Legal", new_user_session_path %>
+      <%= link_to "Mailing List", page_mailing_path %>
+      <%= link_to "Legal", page_legal_path %>
       <% if user_signed_in? %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       <% else %>

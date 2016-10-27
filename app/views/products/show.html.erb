@@ -1,35 +1,40 @@
 <p id="notice"><%= notice %></p>
-<h1> This is my Product </h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+<div id="content">
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <div id="left">
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+      <h1 id="product_name">
+        <%= @product.title %>
+        <br /><br />
+      </h1>
 
-<p>
-  <strong>Subcategory:</strong>
-  <%= @product.subcategory %>
-</p>
+      <h2 id="product_price">
+        <%= @product.price %>
+        <a href="/cart/<%= @product.id %>"> Add to cart</a>
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+      </h2>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p id="product_about">
+        <%= @product.description %>
+      </p>
+
+
+      <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_product_path(@product) %>
+      <p> <%= @product.category %> / <%= @product.subcategory %> </p>
+      <% end %>
+
+  </div>
+  <div id="right">
+
+    <img src="<%= @product.image_url %>" />
+
+  </div>
+</div>
+

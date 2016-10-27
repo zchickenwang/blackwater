@@ -2,12 +2,9 @@ class PageController < ApplicationController
   def home
   end
 
-  def about
+  def mailing
   end
 
-  def faqs
-  end
-
-  def contact
+  def legal
   end
 end

@@ -1,3 +1,126 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#shop_title{
+    font-family: BrandonGrotesque;
+    font-size: 1.0em;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #444444;
+    text-align: center;
+    padding-top: 1%;
+}
+
+table{
+    layout: fixed;
+    width: 100%;
+    margin: 10% auto;
+}
+
+td{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product_photo{
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product_photo:hover { transform: scale(1.3); }
+
+a{
+    text-decoration: none;
+    border: none;
+    &:hover img{
+        border: none;
+        text-decoration: none;
+    }
+}
+
+
+
+#content{
+    overflow: hidden;
+}
+
+#left{
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin: 10% auto;
+
+    #product_name{
+        text-transform: uppercase;
+        font-family: BrandonGrotesque;
+        font-size: 2.0em;
+        letter-spacing: 0.06em;
+        color: #000;
+        font-weight: 500;
+        margin-left: -21px;
+    }
+    #product_price{
+        margin-top: -6px;
+        
+        font-family: AdobeCaslon;
+        font-weight: 300;
+        font-size: 1.1em;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #333333;
+        line-height: 100%;
+
+        a{
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+            text-decoration: none;
+
+            font-family: BrandonGrotesque;
+            font-weight: 500;
+            font-size: 0.9em;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #666666;
+
+            margin-left: 11px;
+
+            &:hover{
+                text-decoration: none;
+                background-color: transparent;
+                color: transparent;
+                text-shadow: 0 0 5px rgba(0,0,0,0.5);
+            }
+        }
+        
+    }
+    #product_about{
+        font-family: AdobeCaslon;
+        font-weight: 300;
+        font-size: 0.9em;
+        letter-spacing: 0.03em;
+        color: #000;
+        line-height: 100%;
+    }
+    
+}
+
+#right{
+    float: right;
+    width: 60%;
+    margin: 20% auto;
+
+    &img{
+        width: 60%;
+    }
+}
+
