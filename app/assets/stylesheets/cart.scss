@@ -1,3 +1,122 @@
 // Place all the styles related to the cart controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#cart_meat{
+    width: 50%;
+    margin: 0 auto;
+
+    h2, a{
+        text-align: center;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        font-family: AdobeCaslon;
+        font-size: 1.0em;
+        letter-spacing: 0.03em;
+        font-weight: 300;
+        color: #000;
+    }
+
+    a{
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+    a:hover{
+        text-decoration: none;
+        color: transparent;
+        background-color: transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    #cart_pay{
+        width: 50%;
+        text-align: center;
+        float: right; 
+        margin: 10% 5% 0 0;
+        padding: 0;
+
+        h4{
+            padding-bottom: 10px;
+            margin: 0;
+            #special{
+                font-family: BrandonGrotesque;
+                font-size: 1.0em;
+                letter-spacing: 0.05em;
+                font-weight: 500;
+                color: #666666;
+                padding-right: 10px;
+            }
+            font-family: AdobeCaslon;
+            font-size: 1.1em;
+            letter-spacing: 0.03em;
+            font-weight: 300;
+            color: #000;
+        }
+    }
+
+    #clearcart{
+        width: 50%;
+        margin: 10% auto;
+        text-align: center;
+    }
+}
+
+.quantity{
+    text-transform: uppercase;
+    font-family: BrandonGrotesque;
+    font-size: 1.0em;
+    letter-spacing: 0.2em;
+    color: #ababab;
+    font-weight: 600;
+}
+
+#cart_list{
+    list-style-type: none;
+    text-align: left;
+    padding: 13% 0 3% 0;
+    width: 50%;
+    td{
+        text-align: left;
+        a{
+            font-family: BrandonGrotesque;
+            font-size: 1.0em;
+            letter-spacing: 0.11em;
+            font-weight: 500;
+            color: #353535;
+            text-transform: uppercase;   
+        }
+    }
+    h3{
+        font-family: AdobeCaslon;
+        font-size: 1.1em;
+        letter-spacing: 0.03em;
+        font-weight: 300;
+        color: #000;
+        margin-left: -30px;
+    }
+}
+
+
+#cart_title{
+    font-family: BrandonGrotesque;
+    font-size: 1.0em;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #444444;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+
+.spec{
+    font-family: AdobeCaslon;
+    font-weight: 300;
+    padding: 0 3em 0 1.5em;
+    letter-spacing: 0.03em;
+    color: #000;
+}
+

@@ -1,43 +1,67 @@
-<h1>Cart</h1>
+<h1 id="cart_title">Cart</h1>
 
-<% if @cart.empty? %>
-    <p> nothing here </p>
-<% else %>
-    <%= link_to 'Empty Cart', cart_clear_path %>
-<% end %>
+<div id="cart_meat">
 
-<% total = 0 %>
 
-<ul>
-<% @cart.each do | id, quantity | %>
-    <% product = Product.find_by_id(id) %>
+  <% if @cart.empty? %>
+      <h2> 
+        <br /> <br />
+        <br /> <br />
+        nothing here /
+        an empty cart rattles loudly </h2>
+  <% else %>
 
-    <li>
-        <%= link_to product.title, product %>
-        <p><%= product.description %></p>
-        <p><%= number_to_currency(product.price, :unit => '$') %></p>
-        <p>Quantity: <%= quantity %></p> 
-    </li>
-    <% total += quantity * product.price %>
+    <% total = 0 %>
 
-<% end %>
-</ul>
+    <table id="cart_list">
+      <% @cart.each do | id, quantity | %>
+          <% product = Product.find_by_id(id) %>
 
-<%= form_tag('/cart/clear', method: :get) do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: <%= number_to_currency(total, :unit => '$') %></span>
-    </label>
-  </article>
-  <input type="hidden" name="prix" value="<%= total * 100 %>">
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="<%= total * 100 %>"
-          data-locale="auto"></script>
-<% end %>
+          <tr>
+              <td>
+                <%= link_to product.title, product %>
+              </td>
+              <td class="deux">
+                <h3> <%= product.price %> </h3>
+              </td>
+              <td>
+                <span class="quantity">(<%= quantity %>)</span>
+              </td>
+          </tr>
+
+          <% total += quantity * product.price %>
+
+      <% end %>
+    </table>
+
+    <div id="cart_pay">
+
+      <%= form_tag('/cart/clear', method: :get) do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="total">
+            <h4> <span id="special"> TOTAL </span> <%= total %> </h4>
+          </label>
+        </article>
+        <input type="hidden" name="prix" value="<%= total * 100 %>">
+        <span style="filter: invert(0%) grayscale(77%) opacity(66%);">
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="BLACKWATER ATELIER"
+                data-amount="<%= total * 100 %>"
+                data-locale="auto">
+          </script>
+        </span>
+      <% end %>
+    </div>
+
+    <div id="clearcart">
+      <a href="<%= cart_clear_path %>"> clear cart </a>
+    </div>
+  <% end %>
+
+</div>
