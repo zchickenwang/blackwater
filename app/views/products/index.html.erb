@@ -15,8 +15,8 @@
     <% @products.each do |product| %>
         
         <td>
-          <a href= "/products/<%= product.id %>">
-            <img src="<%= product.image_url %>" class="product_photo" />
+          <a class="noun" href= "/products/<%= product.id %>">
+            <img src="<%= product.image_url %>" id="product_photo" />
           </a>
 
 <% if user_signed_in? %>
