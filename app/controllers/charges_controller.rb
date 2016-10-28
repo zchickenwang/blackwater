@@ -26,6 +26,6 @@ class ChargesController < ApplicationController
     end
 
     def success
-      redirect_to cart_clear_path and return
+      redirect_to cart_clear_path
     end
 end
