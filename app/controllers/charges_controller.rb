@@ -27,4 +27,5 @@ class ChargesController < ApplicationController
 
     def success
       redirect_to cart_clear_path and return
+    end
 end
