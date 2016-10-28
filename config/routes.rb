@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'page/legal'
 
   resources :charges
-  get 'charges/success' => 'charges#success'
 
   devise_for :users
 
