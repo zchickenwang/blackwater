@@ -131,3 +131,28 @@ a{
         width: 60%;
     }
 }
+
+.fuckmylife{
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    font-family: BrandonGrotesque;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #666666;
+
+    border: none;
+    background-color: transparent;
+    margin-left: 11px;
+
+            &:hover{
+                text-decoration: none;
+                background-color: transparent;
+                color: transparent;
+                text-shadow: 0 0 5px rgba(0,0,0,0.5);
+            }
+}

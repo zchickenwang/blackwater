@@ -20,10 +20,11 @@
         <br /><br />
       </h2>
 
-      <form>
-        <input type="radio" name="sizing" value="S">S
-        <input type="radio" name="sizing" value="M">M
-        <input type="radio" name="sizing" value="L">L
+      <form action="/cart/<%= @product.id %>" method="get">
+        <%= radio_button_tag(:sizing, "S") %>S
+        <%= radio_button_tag(:sizing, "M") %>M
+        <%= radio_button_tag(:sizing, "L") %>L
+        <%= submit_tag("FUKC", :class => "fuckmylife") %>
       </form>
 
       <p id="product_about">

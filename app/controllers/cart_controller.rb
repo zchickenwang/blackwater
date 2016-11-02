@@ -1,6 +1,7 @@
 class CartController < ApplicationController
 
   def add
+    puts params[:sizing]
     id = params[:id]
         if session[:cart] then
             cart = session[:cart]

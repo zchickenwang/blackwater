@@ -16,7 +16,6 @@
     <table id="cart_list">
       <% @cart.each do | id, quantity | %>
           <% product = Product.find_by_id(id) %>
-
           <tr>
               <td>
                 <%= link_to product.title, product %>
@@ -48,7 +47,7 @@
           </label>
         </article>
         <input type="hidden" name="prix" value="<%= total * 100 %>">
-        
+
         <span style="filter: invert(0%) grayscale(77%) opacity(66%);">
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
