@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
 
-  post '/charges' => 'charges#success'
 
   resources :products
 

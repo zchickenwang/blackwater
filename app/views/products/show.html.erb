@@ -20,9 +20,16 @@
         <br /><br />
       </h2>
 
+      <form>
+        <input type="radio" name="sizing" value="S">S
+        <input type="radio" name="sizing" value="M">M
+        <input type="radio" name="sizing" value="L">L
+      </form>
+
       <p id="product_about">
         <%= @product.description %>
       </p>
+
 
 
       <% if user_signed_in? %>
