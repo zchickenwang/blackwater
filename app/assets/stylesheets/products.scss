@@ -57,6 +57,7 @@ a{
 }
 
 #left{
+    position: relative;
     float: left;
     width: 40%;
     text-align: center;
@@ -126,6 +127,7 @@ a{
 }
 
 #right{
+    position: relative;
     float: right;
     width: 60%;
     margin: 20% auto;
