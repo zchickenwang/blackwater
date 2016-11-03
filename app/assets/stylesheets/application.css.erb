@@ -23,6 +23,11 @@ html, body{
     height: 100%;
 }
 
+a:hover, a img:hover{
+    text-decoration: none;
+    border: none;
+}
+
 body{
     background-color: #fefdfc;
     z-index: 0;
@@ -83,14 +88,14 @@ body{
 
 @font-face {
             font-family: 'AdobeCaslon';
-            src: url('<%= asset_path('typefaces/ac/ACPR.ttf') %>');
+            src: url('<%= asset_path('typefaces/ac/ACPR.otf') %>');
             font-weight: 300;
             font-style: normal;
         }
 
 @font-face {
             font-family: 'AdobeCaslon';
-            src: url('<%= asset_path('typefaces/ac/ACPRB.ttf') %>');
+            src: url('<%= asset_path('typefaces/ac/ACPRB.otf') %>');
             font-weight: 500;
             font-style: normal;
         }

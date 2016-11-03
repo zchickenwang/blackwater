@@ -12,8 +12,8 @@
 </h1>
 
 <table>
-
   <tbody>
+
     <% @products.each do |product| %>
         
         <td>
@@ -21,15 +21,15 @@
             <img src="<%= product.image_url %>" id="product_photo" />
           </a>
 
-<% if user_signed_in? %>
-          <%= link_to 'Show', product %>
-          <%= link_to 'Edit', edit_product_path(product) %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %> 
+          <% if user_signed_in? %>
+            <%= link_to 'Show', product %>
+            <%= link_to 'Edit', edit_product_path(product) %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %> 
         </td>
         
-
     <% end %>
+
   </tbody>
 </table>
 
