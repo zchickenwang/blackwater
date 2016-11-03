@@ -127,9 +127,10 @@ a{
 
 #right{
     position: relative;
-    left: 40%;
-    width: 90%;
-    padding: 20% 10%;
+    left: 0;
+    padding-left: 40%;
+    width: 100%;
+    margin: 20% 10%;
     overflow: scroll;
     z-index: 2;
 
