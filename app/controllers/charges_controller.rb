@@ -21,7 +21,6 @@ class ChargesController < ApplicationController
 
       rescue Stripe::CardError => e
         flash[:error] = e.message
-        session[:cart] = nil
         redirect_to new_charge_path
       
     end
