@@ -20,7 +20,7 @@ body{
 
 table{
     layout: fixed;
-    width: 90%;
+    width: 100%;
     margin: 10% auto;
 }
 
@@ -125,15 +125,15 @@ a{
         margin: 0 auto;
         background-color: transparent;
     }
+    
 }
 
 #right{
     position: relative;
     left: 0;
     padding: 20% 10% 10% 40%;
-    width: 150%;
+    width: 100%;
     overflow: scroll;
-    scroll-behavior: smooth;
     z-index: 0;
     background-color: transparent;
 
