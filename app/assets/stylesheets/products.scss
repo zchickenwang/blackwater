@@ -135,6 +135,8 @@ a{
     z-index: 2;
 
     &img{
+        position: absolute;
+        z-index: 3;
         width: 60%;
     }
 }
