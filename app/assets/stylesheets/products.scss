@@ -54,7 +54,7 @@ a{
 #left{
     position: absolute;
     left: 0;
-    top: 0;
+    top: 20%;
     width: 30%;
     text-align: center;
     margin: 10% auto;
@@ -70,7 +70,7 @@ a{
         font-weight: 500;
         margin-left: -21px;
         line-height: 46%;
-
+        background-color: transparent;
     }
     #product_price{
         margin-top: -6px;
@@ -125,12 +125,13 @@ a{
 }
 
 #right{
-    position: relative;
+    position: absolute;
     left: 40%;
     width: 90%;
     padding: 20% 10%;
     overflow: scroll;
     z-index: 2;
+    background-color: transparent;
 
     &img{
         position: absolute;
