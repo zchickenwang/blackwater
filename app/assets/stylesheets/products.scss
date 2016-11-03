@@ -134,12 +134,12 @@ a{
     padding: 20% 10% 10% 40%;
     width: 100%;
     overflow: scroll;
-    z-index: -1;
+    z-index: 0;
     background-color: transparent;
 
     &img{
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         width: 60%;
     }
 }
