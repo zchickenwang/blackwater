@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #shop_title{
     font-family: BrandonGrotesque;
     font-size: 1.0em;
@@ -128,9 +133,8 @@ a{
 #right{
     position: relative;
     left: 0;
-    padding-left: 40%;
+    padding: 20% 10% 10% 40%;
     width: 100%;
-    margin: 20% 10% 10% 0;
     overflow: scroll;
     z-index: 2;
 
