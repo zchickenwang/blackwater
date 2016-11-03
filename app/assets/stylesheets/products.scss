@@ -57,7 +57,7 @@ a{
 }
 
 #left{
-    position: relative;
+    position: absolute;
     float: left;
     width: 40%;
     text-align: center;
@@ -74,6 +74,7 @@ a{
         font-weight: 500;
         margin-left: -21px;
         line-height: 46%;
+        
     }
     #product_price{
         margin-top: -6px;
@@ -121,13 +122,13 @@ a{
         word-wrap: break-word;
         width: 88px; /* change to your preferences */
         margin: 0 auto;
-        overflow:hidden; /* older browsers */
+        background: transparent;
     }
     
 }
 
 #right{
-    position: relative;
+    position: absolute;
     float: right;
     width: 60%;
     margin: 20% auto;
