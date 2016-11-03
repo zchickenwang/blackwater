@@ -57,7 +57,7 @@ a{
     width: 40%;
     text-align: center;
     margin: 10% auto;
-    background: transparent;
+    background-color: transparent;
     z-index: 1;
 
     #product_name{
@@ -81,6 +81,7 @@ a{
         text-transform: uppercase;
         color: #333333;
         line-height: 100%;
+        background-color: transparent;
 
         a{
             -webkit-transition: all 1s ease-in-out;
@@ -117,7 +118,7 @@ a{
         word-wrap: break-word;
         width: 88px; /* change to your preferences */
         margin: 0 auto;
-        background: transparent;
+        background-color: transparent;
     }
     
 }
