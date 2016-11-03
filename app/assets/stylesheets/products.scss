@@ -127,9 +127,9 @@ a{
 #right{
     position: relative;
     left: 40%;
-    width: 100%;
+    width: 90%;
     padding: 20% 10%;
-    overflow-x: scroll;
+    overflow: scroll;
     z-index: 2;
 
     &img{
