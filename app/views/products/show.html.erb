@@ -11,21 +11,34 @@
         <br /><br />
       </h1>
 
-      <h2 id="product_price">
-        <%= @product.price %>
-        <a href="/cart/<%= @product.id %>"> Add to cart</a>
-        <br /><br />
-        <br /><br />
-        <br /><br />
-        <br /><br />
-      </h2>
+        <form id="choosesize" action="/cart/<%= @product.id %>" method="get">
 
-      <form action="/cart/<%= @product.id %>" method="get">
-        <%= radio_button_tag(:sizing, "S") %>S
-        <%= radio_button_tag(:sizing, "M") %>M
-        <%= radio_button_tag(:sizing, "L") %>L
-        <%= submit_tag("FUKC", :class => "fuckmylife") %>
-      </form>
+            <span id="price">
+              <%= @product.price %>
+            </span>
+
+            <span id="purchase">
+              <%= submit_tag("ADD TO CART", :class => "fuckmylife") %>
+            <span>
+
+          <br /><br />
+          <div id="sizebuttons">
+            <input id="option" type="radio" name="sizing" value="S" checked>
+            <label for="option">S</label>
+            
+            <input id="option" type="radio" name="sizing" value="M">
+            <label for="option">M</label>
+
+            <input id="option" type="radio" name="sizing" value="L">
+            <label for="option">L</label>
+
+            <input id="option" type="radio" name="sizing" value="XL">
+            <label for="option">XL</label>
+          </div>
+          <br /><br />
+          <br /><br />
+          <br /><br />
+        </form>
 
       <p id="product_about">
         <%= @product.description %>

@@ -60,6 +60,22 @@
         width: 50%;
         margin: 10% auto;
         text-align: center;
+
+        h8{
+            font-family: AdobeCaslon;
+            font-size: 1.0em;
+            letter-spacing: 0.03em;
+            font-weight: 300;
+            color: #000;
+        }
+        h9{
+            font-family: AdobeCaslon;
+            font-size: 1.0em;
+            letter-spacing: 0.03em;
+            font-weight: 300;
+            color: #000;
+            text-transform: lowercase;
+        }
     }
 }
 

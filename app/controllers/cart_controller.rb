@@ -2,6 +2,7 @@ class CartController < ApplicationController
 
   def add
     puts params[:sizing]
+    @thissize = Rails.cache.write("thissize", params[:sizing])
     id = params[:id]
         if session[:cart] then
             cart = session[:cart]
@@ -23,6 +24,7 @@ class CartController < ApplicationController
   end
 
   def index
+    @thissize = Rails.cache.read("thissize")
     if session[:cart] then
         @cart = session[:cart]
     else

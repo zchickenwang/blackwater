@@ -70,6 +70,7 @@ a{
         color: #000;
         font-weight: 500;
         margin-left: -21px;
+        line-height: 46%;
     }
     #product_price{
         margin-top: -6px;
@@ -140,19 +141,87 @@ a{
 
     font-family: BrandonGrotesque;
     font-weight: 500;
-    font-size: 0.9em;
-    letter-spacing: 0.03em;
+    font-size: 1.05em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #666666;
 
     border: none;
-    background-color: transparent;
-    margin-left: 11px;
+    background-color: #fff;
+    padding: 0 11px;
 
-            &:hover{
-                text-decoration: none;
-                background-color: transparent;
-                color: transparent;
-                text-shadow: 0 0 5px rgba(0,0,0,0.5);
-            }
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: none;
+        background-color: transparent;
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+}
+
+#price{
+    font-family: AdobeCaslon;
+    font-weight: 300;
+    font-size: 1.1em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+#choosesize{
+    margin-left: 5%;
+    &:hover #sizebuttons{
+        opacity: 1;
+    }
+}
+
+#sizebuttons{
+    input[type=checkbox]:not(old),
+    input[type=radio   ]:not(old){
+      width   : 31px;
+      margin-right : -10px;
+      padding : 0;
+      opacity : 0;
+    }
+
+    input[type=checkbox]:not(old) + label,
+    input[type=radio   ]:not(old) + label{
+      display      : inline-block;
+      margin-left  : -21px;
+      margin-right : 11px;
+      background   : transparent;
+      line-height  : 24px;
+      font-family  : AdobeCaslon;
+      font-weight  : 500;
+      font-size    : 0.9em;
+      text-decoration: none;
+      text-transform: lowercase;
+      background-color: transparent;
+      letter-spacing: 0.13em;
+      color: transparent;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    input[type=checkbox]:not(old):checked + label{
+      color: #666666;
+      text-shadow: none;
+    }
+
+    input[type=radio]:not(old):checked + label{
+      color: #555555;
+      text-shadow: none;
+    }
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    opacity: 0;
 }

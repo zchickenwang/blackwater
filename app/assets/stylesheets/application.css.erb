@@ -83,8 +83,15 @@ body{
 
 @font-face {
             font-family: 'AdobeCaslon';
-            src: url('<%= asset_path('typefaces/ac/Adobe+Caslon+Pro+Regular.ttf') %>');
+            src: url('<%= asset_path('typefaces/ac/ACPR.ttf') %>');
             font-weight: 300;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'AdobeCaslon';
+            src: url('<%= asset_path('typefaces/ac/ACPRB.ttf') %>');
+            font-weight: 500;
             font-style: normal;
         }
 
@@ -173,7 +180,7 @@ body{
 
 #logo img{
     width: 4.5%;
-    margin-bottom: -3px;
+    margin-bottom: -1px;
     height: auto;
 }
 
@@ -220,7 +227,7 @@ body{
     font-size: 1.00em;
     letter-spacing: 0.03em;
     color: #000;
-    margin-top: -5px;
+    margin-top: -3px;
     -webkit-transition: all 2s ease-out;
     -moz-transition: all 2s ease-out;
     -o-transition: all 2s ease-out;
