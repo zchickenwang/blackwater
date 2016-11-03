@@ -132,8 +132,9 @@ a{
     position: relative;
     left: 0;
     padding: 20% 20% 10% 40%;
-    width: 100%;
+    width: 150%;
     overflow: scroll;
+    scroll-behavior: smooth;
     z-index: 0;
     background-color: transparent;
 
