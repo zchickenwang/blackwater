@@ -16,6 +16,8 @@ body{
     color: #444444;
     text-align: center;
     padding-top: 1%;
+    position: relative;
+    z-index: 55;
 }
 
 table{
@@ -25,7 +27,7 @@ table{
 }
 
 td{
-    width: 50%;
+    width: 40%;
     text-align: center;
     margin: 0 auto;
     a, a image{
@@ -39,23 +41,26 @@ td{
     }
 }
 
+
+
 #product_photo, a image{
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    width: 60%;
+    width: 88%;
     height: auto;
-    margin: 0 auto;
+    margin: -20% auto -20%;
     border: none !important;
     text-decoration: none !important;
     position: relative; 
     bottom: -.3em;
+    z-index: 33;
 }
 
 #product_photo:hover, a image:hover{ 
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); 
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
     border: none !important;
     text-decoration: none !important;
 }
@@ -126,7 +131,7 @@ td{
         color: #000;
         line-height: 120%;
         word-wrap: break-word;
-        width: 88px; 
+        width: 80px; 
         margin: 0 auto;
         background-color: transparent;
     }
@@ -135,19 +140,20 @@ td{
 
 #right{
     position: relative;
+    margin: 0;
     left: 0;
     width: 100%;
     overflow: scroll;
     scroll-behavior: smooth;
     z-index: 0;
     background-color: transparent;
-    padding: 10% 10% 10% 30%;
 
-    &img{
+    img{
         position: relative;
         z-index: 0;
-        padding: 30% 20% 20% 40%;
-        width: 50%;
+        padding: 0 20% 0 0;
+        width: 150%;
+        height: auto;
     }
 }
 
@@ -165,7 +171,7 @@ td{
     color: #666666;
 
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     padding: 0 11px;
 
     cursor: pointer;
@@ -185,6 +191,7 @@ td{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #212121;
+    background-color: transparent;
 }
 
 #choosesize{
@@ -192,6 +199,7 @@ td{
     &:hover #sizebuttons{
         opacity: 1;
     }
+    background-color: transparent;
 }
 
 #sizebuttons{
@@ -242,4 +250,5 @@ td{
     transition: all 1s ease-in-out;
 
     opacity: 0;
+    background-color: transparent;
 }
