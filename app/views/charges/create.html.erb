@@ -1,70 +1,78 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>
-        BLACKWATER
-    </title>
-    
-    <style>
-
-    @font-face {
-            font-family: 'BrandonGrotesque';
-            src: url('<%= asset_path('typefaces/bg/Brandon_med.otf') %>');
-            font-weight: 400;
-            font-style: normal;
-    }
-    
-    body{
-        background-color: #fefdfc;
-        z-index: 0;
-        margin: 0;
-        padding: 0;
-    }
-    a{
-        color: #000;
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a:hover{
-        color: #000;
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a image{
-        text-decoration: none;
-        border: none;
-    }
-    a image:hover{
-        text-decoration: none;
-        border: none;
-    }
-    #thanks{
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        margin: 5% auto 0;
-    }
-    #fml{
-        width: 20%;
-        height: auto;
-        padding-bottom: 1%;
-        margin: 0 auto;
-    }
-    #shit{
-        font-family: BrandonGrotesque;
-        font-weight: 400;
-        font-size: 2em;
-        letter-spacing: 0.2em;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    </style>
+  <title>BLACKWATER</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%-# the answers you seek will not be found -%>
 </head>
+<body>
 
-<% session[:cart] = nil %>
+  
 
-<div id="thanks">
+<nav id="nav">
     <a href="/">
-        <img id="fml" src='https://s3.amazonaws.com/bwla/logo_big.png' />
-        <h2 id="shit">Thank you for your purchase</h2>
+      <div id="logo">
+          <img src='https://s3.amazonaws.com/bwla/new%2Blogo.png' />
+          <h1>BLACKWATER ATELIER</h1>
+          <h2>los angeles</h2>
+        </a>
+      </div>
     </a>
+    <div id="shop_nav">
+      <%= link_to "Shop", products_path %>
+    </div>
+
+    <div id="cart_nav">
+      <%= link_to "Cart", cart_path %>
+    </div>
+</nav>
+
+
+<div class="wrapper">
+  <div id="alerts">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+<div id="main_wrap">
+    
+
+    <% session[:cart] = nil %>
+
+    <div id="thanks">
+        <a href="/">
+            <img id="fml" src='https://s3.amazonaws.com/bwla/logo_big.png' />
+            <h2 id="shit">Thank you for your purchase</h2>
+        </a>
+    </div>
+
+
+
 </div>
 
+
+
+<div class="push"></div>
+</div>
+
+<div style="padding-top: 5%" />
+
+<div class="footer">
+      <%= link_to "Press", new_user_session_path %>
+      <%= link_to "Mailing List", page_mailing_path %>
+      <%= link_to "Legal", page_legal_path %>
+      <% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+      <% end %>
+
+      <h3>CONCIEVED IN LA / TRANSCENDED IN PARIS / CONSERVE BLACKWATER</h3>
+
+</div>
+
+</body>
+</html>
