@@ -1,3 +1,37 @@
+<head>
+    <style>
+    a, a image{
+    text-decoration: none;
+    border: none;
+
+    &:hover{
+        text-decoration: none;
+        border: none;
+        }
+    }
+    #thanks{
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        margin: 10% auto;
+
+        img{
+            width: 10%;
+            height: auto;
+            padding-bottom: 5%;
+            margin: 0 auto;
+        }
+        h2{
+            font-family: BrandonGrotesque;
+            font-weight: 400;
+            font-size: 2em;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+
 <% session[:cart] = nil %>
 
 <div id="thanks">
