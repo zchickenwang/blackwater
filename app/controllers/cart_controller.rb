@@ -1,6 +1,7 @@
 class CartController < ApplicationController
 
   def add
+    puts "harambe"
     puts params[:sizing]
     @thissize = Rails.cache.write("thissize", params[:sizing])
     id = params[:id]
